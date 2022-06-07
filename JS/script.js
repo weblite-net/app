@@ -84,7 +84,7 @@ editorParent.addEventListener('keydown', () => {
 document.getElementById("mode").addEventListener("click", () => {
     mode = mode === "bright" ? "dark" : "bright";
     localStorage.setItem("mode", mode);
-    document.querySelector("link").setAttribute("href", `${mode}Styles.css`);
+    document.querySelector("link")[0].setAttribute("href", `${mode}Styles.css`);
 })
 
 
