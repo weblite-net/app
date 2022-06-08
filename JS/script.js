@@ -41,7 +41,7 @@ const compile = () => {
 //On Landing
 let editors = [htmlEditor, cssEditor, jsEditor];
 let mode = localStorage.getItem("mode") || "bright";
-document.querySelector("link").setAttribute("href", `${mode}Styles.css`);
+document.querySelectorAll("link")[0].setAttribute("href", `${mode}Styles.css`);
 htmlEditor.value = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,7 +84,7 @@ editorParent.addEventListener('keydown', () => {
 document.getElementById("mode").addEventListener("click", () => {
     mode = mode === "bright" ? "dark" : "bright";
     localStorage.setItem("mode", mode);
-    document.querySelector("link")[0].setAttribute("href", `${mode}Styles.css`);
+    document.querySelectorAll("link")[0].setAttribute("href", `${mode}Styles.css`);
 })
 
 
